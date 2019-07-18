@@ -1,0 +1,82 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 100;
+}
+
+.HeaderGroup {
+    max-width: 90%;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-areas:
+    "logo links";
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Grid Items */
+#HeaderGroup-Logo {
+    grid-area: logo;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+
+#HeaderGroup-Links {
+    grid-area: links;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#HeaderGroup-Links > #about, #contact, #tech {
+        margin: 0 25px;
+}
+
+#HeaderGroup-Links > #about:hover, #contact:hover, #tech:hover {
+    text-decoration: underline;
+}
+
+/* *************************** */
+.Header a {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 700;
+}
+
+.Header button {
+
+    font-size: 17px;
+    border: 1.5px solid white;
+    border-radius: 100px;
+    padding: 10px 23px;
+    text-transform: uppercase;
+
+}
+
+  
+  .Hero a:hover {
+    color: black;
+    background-color: white;
+    transition: .7s;
+  }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #HeaderGroup-Logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 360px) {
+    #HeaderGroup-Logo {
+        content: url('../images/logo no words white.svg');
+        width: 75px;
+    }
+}
+
